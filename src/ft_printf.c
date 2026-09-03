@@ -26,6 +26,14 @@ void    ft_printf(char *s, ...)
             {
                 ft_putchar(va_arg(args,int));
             }
+            else if (s[i] == 'x')
+            {
+                ft_print_hex(va_arg(args,int), "0123456789abcdef");
+            }
+            else if (s[i] == 'X')
+            {
+                ft_print_hex(va_arg(args,int), "0123456789ABCDEF");
+            }
             else
             {
                 ft_putchar(s[i]);
